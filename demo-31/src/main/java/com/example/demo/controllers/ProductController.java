@@ -45,7 +45,6 @@ public class ProductController {
 		p.setName(data.getProduct_name());
 		p.setPrice(data.getProduct_price());
 		p.setQuantity(data.getProduct_quantity());
-		p.setCategoy(     this.productService.getCategoryRepository().findById(data.getCategory_id() ).get()   );
 		
 		
 		ApiResponse res;
@@ -78,8 +77,6 @@ public class ProductController {
 			p.setName(data.getProduct_name());
 			p.setPrice(data.getProduct_price());
 			p.setQuantity(data.getProduct_quantity());
-			p.setCategoy(     this.productService.getCategoryRepository().findById(data.getCategory_id() ).get()   );
-			
 			
 			// save
 			this.productService.getProductRepository().save(p);

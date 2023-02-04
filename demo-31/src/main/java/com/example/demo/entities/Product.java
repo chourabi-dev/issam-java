@@ -3,8 +3,6 @@ package com.example.demo.entities;
 
 import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.*;
 
  
@@ -32,31 +30,6 @@ public class Product {
 	
 	@Column( name="product_created_at", nullable=false )
 	private LocalDateTime createdAt = LocalDateTime.now();
-	
-	
-	
-	@ManyToOne
-	@JoinColumn( name="categories_id" )
-	@JsonIgnore
-	private Category categoy;
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-	public Category getCategoy() {
-		return categoy;
-	}
-
-
-	public void setCategoy(Category categoy) {
-		this.categoy = categoy;
-	}
 
 
 	public long getId() {
