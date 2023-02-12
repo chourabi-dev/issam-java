@@ -1,0 +1,32 @@
+<div class="container mt-5">
+
+    <h3>Books list</h3>
+
+
+    <hr>
+
+
+    <a routerLink="/add">create new book</a>
+
+
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Auth</th> 
+                    <th>Category</th>
+                    <th>Pages</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books">
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.auth }}</td>
+                    <td>{{ book.category }}</td>
+                    <td>{{ book.pages }} pages</td>
+                    
+                </tr>
+            </tbody>
+    </table>
+</div>
